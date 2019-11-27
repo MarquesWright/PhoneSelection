@@ -5,9 +5,13 @@ You may want to print this document for future reference.
 
 Table of Contents
 Section 1 ...... Description
+
 Section 2 ...... Usage
+
 Section 3 ...... Contributions
+
 Section 4 ...... Other Information
+
 
 ----------------------------------------------
 
