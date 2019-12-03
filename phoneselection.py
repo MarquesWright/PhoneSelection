@@ -1,15 +1,14 @@
-import math
 cricketpho = float(input("What is the current price of monthly service at cricket?"))
 verizonpho = float(input("What is the current price of monthly service at verizon?"))
 sprintpho  = float(input("What is the current price of monthly service at sprint?"))
 ans = str(input("Are you bring over your own phone?"))
-if ans == "No" and "no":
+if ans == "Yes" or "yes":
     phoprice = float(input("What is the cost of the phone you will be using?"))
 else:
     phoprice = 0
 def feature():
     Hotspot = str(input("Do you want to include Hotspot? "))
-    if Hotspot == "Yes":
+    if Hotspot == "Yes" or "yes":
         crickethotprice = float(input("What is the cost of cricket Hotspot feature? "))
         verizonhotprice = float(input("What is the cost of verizon Hotspot feature? "))
         sprinthotprice = float(input("What is the cost of sprint Hotspot feature? "))
@@ -37,4 +36,5 @@ def feature():
                 print("Sprint has the lowest total cost with the low total price of " + str(sprinttotal))
                 
 feature()
+
 
