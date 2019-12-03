@@ -22,6 +22,16 @@ class TestPhoneSelection(unittest.TestCase):
         choice = phoneselection.owns()
         self.assertIs(choice, 1)
 
+        # Psuedocode for the Boolean combining the above functions
+        """ Psuedocode Boolean combining above processes
+        
+        Assign variable 'inHouse' to 0
+        Ask if the user is buying the phone at the provider
+        Use 0 for yes and 1 for no
+        Program tests if input == 0
+        Provider discount is added to background total, if relevant
+        """
+        
     def test_numOlines(self):
         """This function checks for how many lines a customer is requesting"""
         result = phoneselection.numOlines()
