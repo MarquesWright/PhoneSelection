@@ -66,7 +66,8 @@ class TestPhoneSelection(unittest.TestCase):
         self.assertLess(result7, 9)
         self.assertLess(result8, 9)
         
-    # Test Query 3: Test listofvendors() for the correct spelling
+    # Test Query 3: Test phonetype() for the correct spelling
+    #               of the phone type
     def test_phonetype(self):
         style1 = phoneselection.phonetype('Smartphone')
         style2 = phoneselection.phonetype('Basic')
@@ -75,10 +76,16 @@ class TestPhoneSelection(unittest.TestCase):
         self.assertEqual(style1, smart, msg="Customer chose a smartphone")
         self.assertEqual(style2, base, msg="Customer chose a basic phone")
         
-    # Test Query 4: Test
+    # Test Query 4: Test features() for incompatible features
     def test_features(self):
-        service = phoneselection.features()
-        self.assertEqual()
+        feature1 = 'International Calling'
+        feature2 = 'HotSpot'
+        feature3 = 'Metered Data'
+        feature4 = 'Unlimited Data'
+        self.assertEqual(feature1, phoneselection.features('International Calling'))
+        self.assertEqual(feature2, phoneselection.features('HotSpot'))
+        self.assertEqual(feature3, phoneselection.features('Metered Data'))
+        self.assertEqual(feature4, phoneselection.features('Unlimited Data'))
 
 # class TestHandlingImproperCases(unittest.TestCase):
 
