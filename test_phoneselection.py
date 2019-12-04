@@ -5,18 +5,27 @@
 #----------------------------------------------
 
 import unittest
-import datetime
 import phoneselection
 
-# Defining a class that will test different cases for the 
-# different functions with the program
+
 class TestPhoneSelection(unittest.TestCase):
 
-    def test_inhouse(self):
+    # def test_inhouse(self):
         """This function checks if the customer is buying a phone"""
-        choice = phoneselection.inhouse()
-        self.assertIs(choice, 0)
-
+        #choice = phoneselection.inhouse()
+        #self.assertIs(choice, 0)
+    
+    # Test Query 1: Test ownorbuying() for whether they own a phone
+    #               or if they are buying a phone
+    def test_ownorbuying(self):
+        # Capture the results of the function
+        result = phoneselection.ownorbuying()
+        # Check for expected ouput
+        owns = 0
+        buying = 1
+        self.assertEqual(owns, result, "Customer owns the phone")
+        self.assertEqual(buying, result, "Customer is buying a new phone")
+    
     def test_owns(self):
         """This function checks if the customer owns their phone"""
         choice = phoneselection.owns()
@@ -32,32 +41,51 @@ class TestPhoneSelection(unittest.TestCase):
         Provider discount is added to background total, if relevant
         """
         
+    # Test Query 2: Test numoflines() to see if the value falls
+    #               within a valid range
     def test_numOlines(self):
-        """This function checks for how many lines a customer is requesting"""
         result = phoneselection.numOlines()
         self.assertGreater(result, 0)
         self.assertLess(result, 9)
+        
+    # Test Query 3: Test listofvendors() for the correct spelling
+    def test_phonetype(self):
+        style = phoneselection.phonetype()
+        self.assertEqual()
+        
+    # Test Query 4: Test
+    def test_features(self):
+        service = phoneselection.features()
+        self.assertEqual()
 
-class TestHandlingImproperCases(unittest.TestCase):
+# class TestHandlingImproperCases(unittest.TestCase):
 
-    def test_correctnumberformat(self):
+    # Test Query 1: Test correctformat() to see if the numbers entered
+    #               are in the correct format
+    # def test_correctnumberformat(self):
         """Test to determine if inputs are in the required numeral format"""
 
+    # Test Query 2: Test validrange() to see if the plan price and
+    #               features are within the correct range
+    # def test_validrange(self):
 
-    def test_validrange(self):
-
-
-    def test_costoffeatures(self):
-
-
-class TestTimeToAnswer(unittest.TestCase):
-
-    def test_timegivenforresults(self):
+    # Test Query 3: Test finalprice() to ensure the price equals
+    #               the total of all inputs
+    # def test_costoffeatures(self):
 
 
-class TestReliability(unittest.TestCase):
+# class TestTimeToAnswer(unittest.TestCase):
 
-    def test_matchingprices(self):
+    # Test Query 1: Test timeforresults() to see if the program is given
+    #               one minute to show results
+    # def test_timegivenforresults(self):
+
+
+# class TestReliability(unittest.TestCase):
+
+    # Test Query 1: Test matchingprices() to ensure all prices match the
+    #               corresponding price the vendor is providing
+    # def test_matchingprices(self):
 
 
 
