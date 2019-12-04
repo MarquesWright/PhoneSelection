@@ -9,11 +9,6 @@ import phoneselection
 
 
 class TestPhoneSelection(unittest.TestCase):
-
-    # def test_inhouse(self):
-        """This function checks if the customer is buying a phone"""
-        #choice = phoneselection.inhouse()
-        #self.assertIs(choice, 0)
     
     # Test Query 1: Test ownorbuying() for whether they own a phone
     #               or if they are buying a phone
@@ -25,11 +20,6 @@ class TestPhoneSelection(unittest.TestCase):
         buying = 1
         self.assertEqual(owns, result, "Customer owns the phone")
         self.assertEqual(buying, result, "Customer is buying a new phone")
-    
-    def test_owns(self):
-        """This function checks if the customer owns their phone"""
-        choice = phoneselection.owns()
-        self.assertIs(choice, 1)
 
         # Psuedocode for the Boolean combining the above functions
         """ Psuedocode Boolean combining above processes
