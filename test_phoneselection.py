@@ -14,14 +14,13 @@ class TestPhoneSelection(unittest.TestCase):
     #               or if they are buying a phone
     def test_ownorbuying(self):
         # Capture the results of the function
-        result1 = phoneselection.ownorbuying('Own')
-        result2 = phoneselection.ownorbuying('Buy')
-        #result2 = phoneselection.ownorbuying('Buy')
+        result1 = phoneselection.ownorbuying('Buy')
+        result2 = phoneselection.ownorbuying('Own')
         # Check for expected ouput
-        owns = 0
-        buying = 1
-        self.assertEqual(owns, result1, msg="Customer owns the phone")
-        self.assertEqual(buying, result2, msg="Customer is buying a new phone")
+        buying = 0
+        owns = 1
+        self.assertEqual(buying, result1, msg="Customer is buying a new phone")
+        self.assertEqual(owns, result2, msg="Customer owns the phone")
 
         # Psuedocode for the Boolean combining the above functions
         """ Psuedocode Boolean combining above processes
