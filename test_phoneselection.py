@@ -93,14 +93,14 @@ class TestHandlingImproperCases(unittest.TestCase):
     #               are in the correct format
     def test_correctnumberformat(self, price):
         self.price = price
-        self.assertIs(type(self.price), float)
+        self.assertIs(phoneselection.correctformat(self.price), float)
 
     # Test Query 2: Test validrange() to see if the plan price and
     #               features are within the correct range
     def test_validrange(self, val_range):
         self.val_range = val_range
         for i in range(7.99, 160):
-            self.assertEqual(self.val_range, i)
+            self.assertEqual(phoneselection.validrange(self.val_range), i)
 
     # Test Query 3: Test finalprice() to ensure the price equals
     #               the total of all inputs
