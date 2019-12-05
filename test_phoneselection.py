@@ -87,16 +87,20 @@ class TestPhoneSelection(unittest.TestCase):
         self.assertEqual(feature3, phoneselection.features('Metered Data'))
         self.assertEqual(feature4, phoneselection.features('Unlimited Data'))
 
-# class TestHandlingImproperCases(unittest.TestCase):
+class TestHandlingImproperCases(unittest.TestCase):
 
     # Test Query 1: Test correctformat() to see if the numbers entered
     #               are in the correct format
-    # def test_correctnumberformat(self):
-        """Test to determine if inputs are in the required numeral format"""
+    def test_correctnumberformat(self, price):
+        self.price = price
+        self.assertIs(type(self.price), float)
 
     # Test Query 2: Test validrange() to see if the plan price and
     #               features are within the correct range
-    # def test_validrange(self):
+    def test_validrange(self, val_range):
+        self.val_range = val_range
+        for i in range(7.99, 160):
+            self.assertEqual(self.val_range, i)
 
     # Test Query 3: Test finalprice() to ensure the price equals
     #               the total of all inputs
