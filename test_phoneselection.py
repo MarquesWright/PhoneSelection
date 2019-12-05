@@ -75,7 +75,14 @@ class TestHandlingImproperCases(unittest.TestCase):
 
     # Test Query 3: Test finalprice() to ensure the price equals
     #               the total of all inputs
-    # def test_costoffeatures(self):
+    def test_totalcost(self, phonePrice, featurePrice, priceOfplan, total):
+        self.phonePrice = phonePrice
+        self.featurePrice = featurePrice
+        self.priceOfplan = priceOfplan
+        self.total = total
+
+        subtotal = self.phonePrice + self.featurePrice + self.priceOfplan
+        self.assertEqual(phoneselection.totalcost(self.total), subtotal)
 
 
 # class TestTimeToAnswer(unittest.TestCase):
