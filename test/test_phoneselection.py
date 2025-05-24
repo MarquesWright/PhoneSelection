@@ -5,22 +5,22 @@
 #----------------------------------------------
 
 import unittest
-from phoneselection import PhoneSelection
+from phone_select.phoneselection import PhoneSelection
 
 
 class TestPhoneSelection(unittest.TestCase):
 
     # Create the setUp to intitialize object
     def setUp(self):
-        self.phoneT = PhoneSelection()
+        self.phone = PhoneSelection()
     
     # Test Query 1: Test ownorbuying() for whether they own a phone
     #               or if they are buying a phone
     def test_ownorbuying(self):
         own = 0
         buy = 1
-        self.assertEqual(own, self.phoneT.ownorbuying())
-        self.assertEqual(buy, self.phoneT.ownorbuying(self.phone))
+        self.assertEqual(own, self.phone.ownorbuying())
+        self.assertEqual(buy, self.phone.ownorbuying(self.phone))
 
         # Psuedocode for the Boolean combining the above functions
         """ Psuedocode Boolean combining above processes

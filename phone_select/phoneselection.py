@@ -11,5 +11,5 @@ class PhoneSelection(object):
 
 if __name__ == '__main__':
     phone = PhoneSelection()
-    #answer1 = input("Do You Own A Phone or Buying a New One? Answer Own or Buy: ")
+    answer1 = input("Do You Own A Phone or Buying a New One? Answer Own or Buy: ")
     response1 = phone.ownorbuying("Own")
